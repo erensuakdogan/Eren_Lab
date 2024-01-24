@@ -29,7 +29,7 @@ SELECT COUNT(store.store_id) as 'Store Count'
 FROM store;
  
 -- 5.2 Determine the number of employees that the company has.
-SELECT COUNT(staff.staff_id) as 'Emp Count'
+SELECT COUNT(staff.staff_id) as 'Employee Count'
 FROM staff;
 
 -- 5.3 Determine how many films are available for rent and how many have been rented.
@@ -37,19 +37,17 @@ SELECT count(title) FROM film;
 SELECT COUNT(rental_id) FROM rental;
 
 -- 5.4 Determine the number of distinct last names of the actors in the database.
-SELECT DISTINCT COUNT(last_name) as 'Number of Unique last names'
+SELECT DISTINCT COUNT(last_name) as 'Number Unique Last names'
 FROM actor;
 
 
 # Retrieve the 10 longest films.
-SELECT title, length
-FROM film
+SELECT title, length FROM film
 ORDER BY length DESC
 LIMIT 10;
 
 # 7.1 Retrieve all actors with the first name "SCARLETT".
-SELECT first_name, last_name
-FROM actor 
+SELECT first_name, last_name FROM actor 
 WHERE first_name = 'SCARLETT';
 
 
